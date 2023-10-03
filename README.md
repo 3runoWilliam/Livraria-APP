@@ -18,9 +18,9 @@ Este é um aplicativo Android simples para gerenciar uma lista de livros. Ele pe
 
 ## Capturas de Tela
 
-<img src="https://github.com/3runoWilliam/Livraria-APP/assets/85655579/a2c65588-b42e-4e02-9743-bde95005fc53" alt="Captura de Tela 1" width="300" align="center" />
-<img src="https://github.com/3runoWilliam/Livraria-APP/assets/85655579/655add54-e379-4921-a680-92ef950815a2" alt="Captura de Tela 2" width="300" align="center" />
-<img src="https://github.com/3runoWilliam/Livraria-APP/assets/85655579/dddf935a-4085-4359-ab9e-fcbe4211e173" alt="Captura de Tela 3" width="300" align="center" />
+<img src="https://github.com/3runoWilliam/Livraria-APP/assets/85655579/a2c65588-b42e-4e02-9743-bde95005fc53" alt="Captura de Tela 1" width="200" align="center" />
+<img src="https://github.com/3runoWilliam/Livraria-APP/assets/85655579/655add54-e379-4921-a680-92ef950815a2" alt="Captura de Tela 2" width="200" align="center" />
+<img src="https://github.com/3runoWilliam/Livraria-APP/assets/85655579/dddf935a-4085-4359-ab9e-fcbe4211e173" alt="Captura de Tela 3" width="200" align="center" />
 
 
 ## Tecnologias Utilizadas
