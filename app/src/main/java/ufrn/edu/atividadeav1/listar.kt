@@ -2,9 +2,10 @@ package ufrn.edu.atividadeav1
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import database.DataBase
 import model.Books
@@ -13,6 +14,8 @@ import ufrn.edu.atividadeav1.databinding.ActivityListarBinding
 class listar : AppCompatActivity() {
     private lateinit var binding: ActivityListarBinding
     private lateinit var db: DataBase
+
+    var coun = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,14 +26,41 @@ class listar : AppCompatActivity() {
             DataBase::class.java,
             "books"
         ).allowMainThreadQueries().build()
+    }
 
-        val recyclerView = binding.recyclerView
-        recyclerView.layoutManager = LinearLayoutManager(this)
+    override fun onResume() {
+        super.onResume()
 
-        val livros = getLivrosFromDatabase()
+        var livros = db.booksDAO().listAllCerto()
 
-        val adapter = LivroAdapter(livros)
-        recyclerView.adapter = adapter
+
+        binding.nomeAno.text = livros[coun].ano.toString()
+        binding.nomeAutor.text = livros[coun].autor
+        binding.nomeTitulo.text = livros[coun].titulo
+        binding.nomeNota.text = livros[coun].nota.toString()
+
+        binding.btnProximo.setOnClickListener {
+            if (coun < livros.size - 1) {
+                Log.i("entrou no if", coun.toString())
+                coun++
+                onResume()
+            }else {
+                Log.i("entrou no else", coun.toString())
+                coun = livros.size
+                Toast.makeText(this,"Acabou os livros", Toast.LENGTH_SHORT).show()
+            }
+        }
+        binding.btnAnterior.setOnClickListener {
+            if (coun > 0) {
+                coun--
+                onResume()
+            }else{
+                coun = 0
+                Toast.makeText(this,"Este e o primeiro livro", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
     }
 
     @SuppressLint("Range")

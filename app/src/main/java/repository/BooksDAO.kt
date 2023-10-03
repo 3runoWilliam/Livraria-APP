@@ -16,6 +16,8 @@ interface BooksDAO {
     @Query("select * from Books")
     fun listAllAux(): Cursor
 
+    @Query("select * from Books")
+    fun listAllCerto(): List<Books>
 
     @Query("select * from Books")
     fun listAll(): ArrayList<Books>{
