@@ -22,7 +22,7 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.336" />
+            app:layout_constraintVertical_bias="0.389" />
 
         <Button
             android:id="@+id/listar"
@@ -33,7 +33,18 @@
             app:layout_constraintEnd_toEndOf="@+id/cadastrar"
             app:layout_constraintStart_toStartOf="@+id/cadastrar"
             app:layout_constraintTop_toBottomOf="@+id/cadastrar"
-            app:layout_constraintVertical_bias="0.313" />
+            app:layout_constraintVertical_bias="0.155" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contribuidores: Bruno W, Marlon A e Tobias P"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.952" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
